@@ -1,0 +1,16 @@
+#Criado por AdamWeishaupt
+#Twitter: @AdamWeishaup7
+
+import requests
+import json
+
+#Gerador de Proxy
+#É necessário ter as bibliotecas requests e json instaladas.
+
+siteApi = requests.get('https://api.getproxylist.com/proxy')
+proxie = json.loads(siteApi.text)
+print("IP:", proxie['ip'])
+print("PORTA:", proxie['port'])
+print("PROTOCOLO:", proxie['protocol'])
+print("PAIS:", proxie['country'])
+print("ANONIMATO:", proxie['anonymity'])
